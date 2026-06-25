@@ -1,0 +1,14 @@
+{
+  "name": "kanban-slack-bot",
+  "version": "1.0.0",
+  "description": "A simple Slack bot to generate evidence screenshots",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "dotenv": "^16.4.5"
+  }
+}

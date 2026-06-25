@@ -1,0 +1,32 @@
+{
+  "autoDeploy": "yes",
+  "branch": "main",
+  "name": "kanban-api",
+  "ownerId": "tea-d8uato68bjmc73dk8u7g",
+  "repo": "https://github.com/richa-singh-8118/forge2-kanban-board",
+  "rootDir": "backend",
+  "type": "web_service",
+  "serviceDetails": {
+    "env": "docker",
+    "region": "oregon",
+    "plan": "free",
+    "envVars": [
+      {
+        "key": "APP_KEY",
+        "value": "base64:xK11zJ6y7uIqG2Tz/yU2H7hEwT+P8W/B8lBv4M2aT6w="
+      },
+      {
+        "key": "APP_ENV",
+        "value": "production"
+      },
+      {
+        "key": "APP_DEBUG",
+        "value": "false"
+      },
+      {
+        "key": "DB_CONNECTION",
+        "value": "sqlite"
+      }
+    ]
+  }
+}

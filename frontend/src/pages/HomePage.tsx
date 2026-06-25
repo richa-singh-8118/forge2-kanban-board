@@ -111,10 +111,13 @@ export function HomePage() {
           )}
 
           {boards.map(board => (
-            <button
+            <div
               key={board.id}
               onClick={() => fetchBoard(board.id)}
-              className={`w-full flex items-center justify-between px-5 py-2.5 text-sm transition-all group ${
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') fetchBoard(board.id); }}
+              className={`w-full flex items-center justify-between px-5 py-2.5 text-sm transition-all group cursor-pointer ${
                 activeBoard?.id === board.id
                   ? 'bg-indigo-50/60 text-indigo-700 font-semibold border-r-2 border-indigo-600'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-800'
@@ -143,7 +146,7 @@ export function HomePage() {
                   }
                 </button>
               </div>
-            </button>
+            </div>
           ))}
         </div>
 
