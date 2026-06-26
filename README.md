@@ -2,6 +2,15 @@
 
 A production-ready Kanban Board application built with **Laravel 13** (backend) and **React + Vite** (frontend).
 
+## 🔗 Live Deployment
+
+| Service  | URL |
+|----------|-----|
+| Frontend | [https://frontend-three-gamma-72.vercel.app](https://frontend-three-gamma-72.vercel.app) |
+| Backend API | [https://kanban-api-69h4.onrender.com/api](https://kanban-api-69h4.onrender.com/api) |
+| GitHub Repo | [https://github.com/richa-singh-8118/forge2-kanban-board](https://github.com/richa-singh-8118/forge2-kanban-board) |
+| Slack Evidence | [Google Drive](https://drive.google.com/drive/folders/1ZVxAUAJjYidbRRwwQXKQ98ZeiG3qmGqN?usp=drive_link) |
+
 ---
 
 ## Features
@@ -159,8 +168,21 @@ Frontend runs at: **http://localhost:5173**
 4. Framework Preset: **Vite**.
 5. Build Command: `npm run build`.
 6. Output Directory: `dist`.
-7. Add an environment variable: `VITE_API_URL` pointing to your Render backend URL (e.g., `https://kanban-backend.onrender.com/api`).
-   *(Note: Ensure you update `src/services/api.ts` to use `import.meta.env.VITE_API_URL` in production).*
+7. Add an environment variable: `VITE_API_BASE_URL` pointing to your Render backend URL (e.g., `https://kanban-api-69h4.onrender.com/api`).
+   *(The `src/services/api.ts` already reads `import.meta.env.VITE_API_BASE_URL` and falls back to localhost for development.)*
+
+---
+
+## Slack Bot
+
+A Node.js Slack bot is included in the `slack-bot/` directory. It uses `@slack/bolt` in Socket Mode to respond to messages in Slack channels.
+
+### Setup
+1. Copy `slack-bot/.env.example` to `slack-bot/.env` and fill in your Slack tokens.
+2. Run `cd slack-bot && npm install && npm start`.
+3. Invite the bot to your Slack channels.
+
+See `slack-export/` for screenshots of the bot in action.
 
 ---
 
